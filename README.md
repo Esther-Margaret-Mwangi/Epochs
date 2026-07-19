@@ -63,18 +63,16 @@ Food insecurity remains a major challenge in many African countries. Farmers oft
 
 ## Methodology: CRISP-DM
 
-```
+
 1. Business Understanding  →  Problem definition and stakeholder analysis
 2. Data Understanding      →  Exploration of 13,802 rows across 82 crops
 3. Data Preparation        →  Cleaning, imputation, encoding, scaling
 4. Modelling               →  6 models including deep learning (FT-Transformer)
 5. Evaluation              →  Metric comparison and best model selection
 6. Deployment              →  Interactive crop recommendation system
-
 ---
 
- ## Data Preparation
-
+## Data Preparation
 | Step | Action | Detail |
 |---|---|---|
 | Duplicates | Dropped 6 duplicate rows | `df.drop_duplicates()` |
@@ -85,7 +83,6 @@ Food insecurity remains a major challenge in many African countries. Farmers oft
 | Encoding | One-hot encoded `Crop Name` | 82 new binary columns added |
 | Scaling | `StandardScaler` on 7 numeric columns only | Crop dummy columns left unscaled |
 
----
 
 Three methods were compared for imputing the ~30% missing Soil moisture values:
 
@@ -101,6 +98,7 @@ R² Score : 0.796
 MAE      : 2.623
 MSE      : 13.196
 RMSE     : 3.633
+---
 
 ## Models
 
@@ -114,9 +112,9 @@ RMSE     : 3.633
 | FT-Transformer | Deep Learning | Custom PyTorch implementation |
 
 **Random Forest tuning best parameters:**
-```
+---
 n_estimators=300, min_samples_split=5, min_samples_leaf=2, max_depth=30
-```
+
 
 ---
 
