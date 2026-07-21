@@ -68,7 +68,7 @@ Support farmers in selecting suitable crops and improving agricultural productiv
 | ----------------- | -------- | ------------------------------- |
 | Target Yield      | kg       | Expected crop yield             |
 | Field Size        | acres    | Size of the farm plot           |
-| pH (water)        | —        | Soil acidity/alkalinity         |
+| pH (water)        | -        | Soil acidity/alkalinity         |
 | Organic Carbon    | g/kg     | Soil organic matter content     |
 | Total Nitrogen    | g/kg     | Nitrogen content                |
 | Phosphorus (M3)   | mg/kg    | Mehlich-3 phosphorus extraction |
@@ -79,12 +79,12 @@ Support farmers in selecting suitable crops and improving agricultural productiv
 
 ## 5. Methodology: CRISP-DM
 
-1. Business Understanding → Problem definition and stakeholder analysis
-2. Data Understanding → Exploration of 13,802 rows across 82 crops
-3. Data Preparation → Cleaning, imputation, encoding, scaling
-4. Modelling → 6 models including deep learning (FT-Transformer)
-5. Evaluation → Metric comparison and best model selection
-6. Deployment → Interactive crop recommendation system
+1. Business Understanding- Problem definition and stakeholder analysis
+2. Data Understanding- Exploration of 13,802 rows across 82 crops
+3. Data Preparation- Cleaning, imputation, encoding, scaling
+4. Modelling- 6 models including deep learning (FT-Transformer)
+5. Evaluation- Metric comparison and best model selection
+6. Deployment- Interactive crop recommendation system
 
 ---
 
@@ -170,13 +170,13 @@ Field size is the most influential variable. Crop type and soil chemistry featur
 ### Data Exploration
 
 - Organic Carbon and Total Nitrogen are strongly correlated (r = 0.92)
-- Target Yield is heavily right-skewed — log transformation applied before modeling
+- Target Yield is heavily right-skewed- log transformation applied before modeling
 - Maize had the highest number of records; melon-water and carrot had the fewest
 
 ### Model Performance
 
 - Random Forest achieved the best performance (R²=0.67, MAE=0.62, RMSE=1.03)
-- FT-Transformer underperformed (R²=0.009) — consistent with research showing transformer models require substantially larger datasets (>100,000 rows) to outperform tree-based ensembles on structured tabular data
+- FT-Transformer underperformed (R²=0.009)- consistent with research showing transformer models require substantially larger datasets (>100,000 rows) to outperform tree-based ensembles on structured tabular data
 - Hyperparameter tuning improved Random Forest marginally but did not significantly improve XGBoost
 
 ---
@@ -228,26 +228,26 @@ An interactive crop recommendation widget was built using `ipywidgets`. The syst
 
 ## Other Recommendations
 
-- Improve Data Quality: Future data collection should focus on reducing missing values and implementing validation procedures to minimize inaccurate or unrealistic records. Collecting more observations for underrepresented crop types will also improve model reliability and reduce class imbalance.
+- Improve Data Quality- Future data collection should focus on reducing missing values and implementing validation procedures to minimize inaccurate or unrealistic records. Collecting more observations for underrepresented crop types will also improve model reliability and reduce class imbalance.
 
-- Incorporate Additional Environmental Variables: Future models should integrate factors such as rainfall, temperature, humidity, irrigation practices, fertilizer application, pest and disease occurrence, and geographic location to enhance prediction accuracy.
+- Incorporate Additional Environmental Variables- Future models should integrate factors such as rainfall, temperature, humidity, irrigation practices, fertilizer application, pest and disease occurrence, and geographic location to enhance prediction accuracy.
 
-- Deploy the Random Forest Model: Since the Random Forest model achieved the best predictive performance among all evaluated models, it is recommended as the production model for crop yield prediction applications.
+- Deploy the Random Forest Model- Since the Random Forest model achieved the best predictive performance among all evaluated models, it is recommended as the production model for crop yield prediction applications.
 
-- Prioritize Key Predictive Factors: Farmers and agricultural stakeholders should focus on monitoring and managing the most influential variables identified by the model, including field size, crop type, soil moisture, soil pH, nitrogen, phosphorus, potassium, and organic carbon.
+- Prioritize Key Predictive Factors- Farmers and agricultural stakeholders should focus on monitoring and managing the most influential variables identified by the model, including field size, crop type, soil moisture, soil pH, nitrogen, phosphorus, potassium, and organic carbon.
 
-- Develop a Decision Support System: The predictive model should be implemented as a user-friendly web or mobile application that allows users to input field information, receive crop yield predictions, and obtain practical recommendations for improving soil and crop management.
+- Develop a Decision Support System- The predictive model should be implemented as a user-friendly web or mobile application that allows users to input field information, receive crop yield predictions, and obtain practical recommendations for improving soil and crop management.
 
-- Provide Action-Oriented Recommendations: Beyond predicting crop yield, future systems should generate personalized recommendations on soil nutrient management, pH adjustment, moisture conservation, and suitable crop selection to support informed farming decisions.
+- Provide Action-Oriented Recommendations- Beyond predicting crop yield, future systems should generate personalized recommendations on soil nutrient management, pH adjustment, moisture conservation, and suitable crop selection to support informed farming decisions.
 
-- Enhance Future Research: Further work should investigate prediction errors, develop crop-specific prediction models, incorporate satellite and weather data, validate the model across different regions, and continuously retrain the model using newly collected agricultural data to improve its robustness and generalizability
+- Enhance Future Research- Further work should investigate prediction errors, develop crop-specific prediction models, incorporate satellite and weather data, validate the model across different regions, and continuously retrain the model using newly collected agricultural data to improve its robustness and generalizability
 
 ---
 
 ## Limitations
 
-- Dataset reflects expected/attainable yield potential from soil-test records — not literally measured farm harvests
-- Climate variables (rainfall, temperature) are absent — adding them would likely improve R² significantly
+- Dataset reflects expected/attainable yield potential from soil-test records- not literally measured farm harvests
+- Climate variables (rainfall, temperature) are absent- adding them would likely improve R² significantly
 - FT-Transformer underperformed due to dataset size; transformer architectures are better suited to larger datasets
 - Predictions represent a yield estimate, not a guarantee
 
