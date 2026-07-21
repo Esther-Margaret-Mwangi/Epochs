@@ -94,7 +94,7 @@ Support farmers in selecting suitable crops and improving agricultural productiv
 | Step                         | Action                                          | Detail                                    |
 | ---------------------------- | ----------------------------------------------- | ----------------------------------------- |
 | Duplicates                   | Dropped 6 duplicate rows                        | `df.drop_duplicates()`                    |
-| Missing Soil moisture (~30%) | Compared KNN, Random Forest, XGBoost imputation | **Random Forest selected** (best R²)      |
+| Missing Soil moisture (30%) | Compared KNN, Random Forest, XGBoost imputation | **Random Forest selected** (best R²)      |
 | Outliers                     | Per-crop IQR method                             | Crop-specific ranges respected            |
 | Dropped columns              | Removed `Organic Matter Need` and `Lime Need`   | Not available pre-planting                |
 | Log transformation           | Applied `log1p` to Target Yield                 | Reduces skewness, improves model learning |
