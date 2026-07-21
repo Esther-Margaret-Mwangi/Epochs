@@ -20,22 +20,33 @@ The aim of this project is to build a machine learning system that predicts crop
 * Financial Institutions & insurers.
 * Consumers.
 
----
-
-## Business Problem
-
-Food insecurity remains a major challenge in many African countries. Farmers often make planting decisions without knowing how much they are likely to harvest. This leads to:
-
-- Poor input planning (seed, fertilizer, labor)
-- Wasted resources on low-yield crops
-- Reduced agricultural productivity
-- Increased food insecurity
-
-**Objective**: Predict expected crop yield using soil test results and field size — enabling farmers and extension officers to make data-driven planting decisions before the season begins.
+### 1.3 Success Metrics
+- Lowest Mean Absolute Error (MAE).
+- Lowest Root Mean Squared Error (RMSE).
+- Highest R2 score.
 
 ---
 
-## Dataset
+## 2. Business Problem
+
+Globally, 2.33 billion people experienced moderate or severe food insecurity in 2023
+Africa has the world's highest undernourishment rate, affecting about 20% of its population 
+Agricultural productivity remains low due to climate change, limited technology adoption and inadequate farming information
+In Kenya, about 98% of crop production depends on rainfall, making farming highly vulnerable to climate variability 
+Food insecurity remains a major challenge in many African countries. Farmers often make planting decisions without knowing how much they are likely to harvest. This can lead to poor planning, inefficient use of fertilizers and other resources, and lower crop production. As a result, farmers may experience financial losses, while governments and agricultural organizations find it difficult to plan for future food needs. Thus creating a need for a a reliable system that can help predict crop yield before planting using soil data.
+
+#### 2.1 General Objective
+ support farmers in selecting suitable crops and improving agricultural productivity through informed decision-making.
+ #### 2.2 Specific Objectives
+- Estimate the expected harvest of different crops .
+- Identify crops that are best suited to different farming conditions.
+- Provide farmers with alternative crop options to improve production.
+- Support farmers in making informed crop selection decisions.
+- Promote higher agricultural productivity and sustainable farming practices
+
+---
+
+## 3. Dataset
 
 | Property | Detail |
 |---|---|
@@ -61,7 +72,7 @@ Food insecurity remains a major challenge in many African countries. Farmers oft
 | Organic Matter | kg
 | Lime | kg
 
-## Methodology: CRISP-DM
+## 4. Methodology: CRISP-DM
 
 
 1. Business Understanding  →  Problem definition and stakeholder analysis
@@ -72,7 +83,7 @@ Food insecurity remains a major challenge in many African countries. Farmers oft
 6. Deployment              →  Interactive crop recommendation system
 ---
 
-## Data Preparation
+## 5. Data Preparation
 | Step | Action | Detail |
 |---|---|---|
 | Duplicates | Dropped 6 duplicate rows | `df.drop_duplicates()` |
@@ -100,7 +111,7 @@ MSE      : 13.196
 RMSE     : 3.633
 ---
 
-## Models
+## 6. Models
 
 | Model | Type | Configuration |
 |---|---|---|
@@ -137,7 +148,7 @@ Random Forest outperformed all other models including XGBoost and the FT-Transfo
 
 ---
 
-## Key Findings
+## 7. Key Findings
 
 ### Feature Importance (Random Forest)
 
@@ -163,7 +174,7 @@ Field size is the most influential variable. Crop type and soil chemistry featur
 
 ---
 
-## Crop Recommendation System
+## 8. Crop Recommendation System
 
 An interactive crop recommendation widget was built using `ipywidgets`. The system allows farmers or extension officers to input their soil readings and receive a ranked list of recommended crops with predicted yield estimates.
 
@@ -177,13 +188,13 @@ An interactive crop recommendation widget was built using `ipywidgets`. The syst
 5. Farmer gets alternatives if results show higher and better ones.
 6. Farmer doesnt get alternatives if the results they get is ranked the highest andbest prediction.
 
-## 8. Findings. 
-### 8.1 Data Exploration Findings
+## 9. Findings. 
+### 9.1 Data Exploration Findings
 * The dataset contained over 10,000 crop records from different crop types and soil conditions, providing enough data to build reliable prediction models.
 * Removing missing values, duplicates, and crop-specific outliers improved the quality of the dataset.
 * Applying a log transformation to the target yield reduced skewness and made the data more suitable for machine learning.
 
-### 8.2 Model Findings
+### 9.2 Model Findings
 * Among all the models tested, the Random Forest Regressor achieved the best overall performance with an MAE (0.62), MSE(1.07), RMSE (1.03), and R² Score (0.67)
 * The Linear Regression (Ridge) model performed the worst among the traditional machine learning models because it could not capture the complex relationships between soil properties and crop yield.
 * The XGBoost model produced results that were similar to Random Forest but performed slightly worse on this dataset.
@@ -192,11 +203,11 @@ An interactive crop recommendation widget was built using `ipywidgets`. The syst
 * Feature importance analysis showed that Field Size was the most influential variable in predicting crop yield.
 * The Random Forest model produced predictions that were generally close to the actual crop yields, although there were a few crops with extremely high or very low yields had larger prediction errors.
 
-### 8.3 Business Findings
+### 9.3 Business Findings
 * The recommendation system successfully predicted the crop yield of a farmer's selected crop using the provided soil measurements and field size.
 * The recommendation system also identified alternative crops that could produce higher yields under the same soil conditions, helping farmers make more informed planting decisions.
 
-## Recommendations
+## 10. Recommendations
 
 * Farmers should use this prediction model before planting to estimate the expected crop yield based on their soil properties and field size in order to make informed decisions.
 * Farmers should also use the recommendation system to compare different crop options and select crops that are predicted to produce higher yields under the same soil conditions.
