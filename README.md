@@ -24,9 +24,8 @@ The aim of this project is to build a machine learning system that predicts crop
 
 ### 1.3 Success Metrics
 
-- Lowest Mean Absolute Error (MAE).
-- Lowest Root Mean Squared Error (RMSE).
 - Highest R2 score.
+- Lowest Mean Absolute Error (MAE).
 
 ---
 
@@ -57,7 +56,7 @@ Support farmers in selecting suitable crops and improving agricultural productiv
 | Source: Local Soil Dataset
 | File | `Editted2.xlsx` |
 | Original records | 13,802 rows |
-| Final records (after cleaning) | 13,500 rows |
+| Final records (after cleaning) | 11,783 rows |
 | Crop types | 82 crops |
 | Target variable | Target Yield (kg) |
 
@@ -248,15 +247,5 @@ An interactive crop recommendation widget was built using `ipywidgets`. The syst
 - Climate variables (rainfall, temperature) are absent- adding them would likely improve R² significantly
 - FT-Transformer underperformed due to dataset size; transformer architectures are better suited to larger datasets
 - Predictions represent a yield estimate, not a guarantee
-
----
-
-## Future Work
-
-- Integrate rainfall and temperature data (NASA POWER / Open-Meteo API)
-- Expand dataset with farmer-reported yield outcomes across more African regions
-- Re-evaluate transformer-based models at larger dataset scales
-- Deploy as a Streamlit web application for farmer-facing use
-- Add county/region-level geographic features for location-specific modelling
 
 ---
