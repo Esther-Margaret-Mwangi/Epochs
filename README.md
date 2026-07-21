@@ -112,10 +112,9 @@ Three methods were compared for imputing the ~30% missing Soil moisture values:
 Based on the model outputs above, the Random Forest model was selected as the best to predict and impute the missing values for the "Soil Moisture" feature as it was the best performing model overall with the folowing metrics:
 
 R² Score : 0.796
-MAE : 2.623
-MSE : 13.196
-RMSE : 3.633
-
+MAE      : 2.623
+MSE      : 13.196
+RMSE     : 3.633
 ---
 
 ## 7. Models
