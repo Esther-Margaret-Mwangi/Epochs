@@ -52,9 +52,10 @@ Support farmers in selecting suitable crops and improving agricultural productiv
 
 ## 4. Dataset
 
-| Property | Detail |
-| -------- | ------ |
+## 3. Dataset
 
+| Property | Detail |
+|---|---|
 | Source: Local Soil Dataset
 | File | `Editted2.xlsx` |
 | Original records | 13,802 rows |
