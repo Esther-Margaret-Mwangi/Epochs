@@ -250,13 +250,3 @@ An interactive crop recommendation widget was built using `ipywidgets`. The syst
 - Predictions represent a yield estimate, not a guarantee
 
 ---
-
-## Future Work
-
-- Integrate rainfall and temperature data (NASA POWER / Open-Meteo API)
-- Expand dataset with farmer-reported yield outcomes across more African regions
-- Re-evaluate transformer-based models at larger dataset scales
-- Deploy as a Streamlit web application for farmer-facing use
-- Add county/region-level geographic features for location-specific modelling
-
----
