@@ -57,7 +57,7 @@ Support farmers in selecting suitable crops and improving agricultural productiv
 | Source: Local Soil Dataset
 | File | `Editted2.xlsx` |
 | Original records | 13,802 rows |
-| Final records (after cleaning) | 13,500 rows |
+| Final records (after cleaning) | 11,783 rows |
 | Crop types | 82 crops |
 | Target variable | Target Yield (kg) |
 
