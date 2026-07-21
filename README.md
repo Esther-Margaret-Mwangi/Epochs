@@ -52,8 +52,6 @@ Support farmers in selecting suitable crops and improving agricultural productiv
 
 ## 4. Dataset
 
-## 3. Dataset
-
 | Property | Detail |
 |---|---|
 | Source: Local Soil Dataset
