@@ -24,9 +24,8 @@ The aim of this project is to build a machine learning system that predicts crop
 
 ### 1.3 Success Metrics
 
-- Lowest Mean Absolute Error (MAE).
-- Lowest Root Mean Squared Error (RMSE).
 - Highest R2 score.
+- Lowest Mean Absolute Error (MAE).
 
 ---
 
